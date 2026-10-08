@@ -1,0 +1,28 @@
+[runtime]
+backend = "docker"
+image = "replace-with-prepared-builder-image@sha256:REPLACE"
+python = "python3"
+timeout = 300
+memory = "2g"
+cpus = "2"
+
+[agent]
+argv = ["/absolute/path/to/tool-agent-wrapper", "--request", "{request}", "--response", "{response}"]
+stdin_prompt = true
+
+[pipeline]
+min_kept = 8
+rebuild = true
+
+# Alternative to [agent]: remove that section and configure the documented
+# bash/write/done JSON-action model loop. Shell actions execute in Docker.
+# [model]
+# base_url = "https://your-service.example/v1"
+# model = "your-served-model"
+# api_key_env = "PROGRAMBENCH_API_KEY"
+# max_steps = 80
+# max_tokens = 4096
+# temperature = 0.2
+# request_timeout = 200
+# request_attempts = 5
+# tool_timeout = 150

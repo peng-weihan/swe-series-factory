@@ -1,0 +1,4 @@
+# For controlled, trusted local fixtures only; host execution is not a sandbox.
+[runtime]
+backend = "host"
+timeout = 300

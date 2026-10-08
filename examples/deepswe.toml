@@ -1,0 +1,19 @@
+# Config is read-only until a run/verify command is invoked. No model credentials here.
+[runtime]
+backend = "docker"
+# Supply an existing dependency/toolchain image; pin the actual ID/digest for a run.
+image = "replace-with-prepared-deepswe-image@sha256:REPLACE"
+python = "python3"
+timeout = 300
+memory = "2g"
+cpus = "2"
+# docker_host = "ssh://your-docker-host"
+
+[agent]
+# Same request/response protocol as the existing NL2Repo CommandAgent.
+# The CLI owns its tool loop and task sandbox. No historical endpoint is assumed.
+argv = ["/absolute/path/to/tool-agent-wrapper", "--request", "{request}", "--response", "{response}"]
+stdin_prompt = true
+
+[pipeline]
+repair_rounds = 3

@@ -1,0 +1,3 @@
+{"route":"ablation","url":"https://example.invalid/owner/repo.git","commit":"0123456789abcdef0123456789abcdef01234567","production_paths":["src/package"],"test_paths":["tests"]}
+{"route":"query","url":"https://example.invalid/owner/another.git","commit":"0123456789abcdef0123456789abcdef01234567","production_paths":["package"],"test_paths":["tests"]}
+{"route":"specialize","url":"https://example.invalid/owner/reference.git","commit":"0123456789abcdef0123456789abcdef01234567","production_paths":["package"],"test_paths":["tests"],"reference_dir":"/absolute/path/to/reference-tasks","reference_task_id":"reference-001"}

@@ -1,0 +1,32 @@
+# All relative paths are relative to this configuration file.
+[paths]
+root = "../runs/production"
+dataset = "../runs/dataset"
+images = "../runs/images"
+
+[agent]
+# Replace with your installed tool-capable Agent CLI or a wrapper executable.
+# Prompt is sent on stdin. These placeholders are supported in individual args:
+# {request}, {response}, {prompt}, {workspace}, {role}
+# It can instead use NL2REPO_REQUEST, NL2REPO_RESPONSE, NL2REPO_WORKSPACE, etc.
+# Final JSON is read from the response file, falling back to stdout.
+argv = ["/absolute/path/to/tool-agent-wrapper", "--request", "{request}", "--response", "{response}"]
+stdin_prompt = true
+
+[docker]
+binary = "docker"
+# host = "ssh://user@docker-host" # Docker API transport, not remote Agent execution
+
+[pipeline]
+agent_timeout = 3600
+specification_timeout = 1800
+repair_timeout = 1800
+build_timeout = 3600
+oracle_timeout = 3600
+agent1_retries = 1
+coverage_retries = 4
+image_leak_retries = 1
+oracle_infra_retries = 2
+repair_rounds = 3
+verify_empty = true
+skip_oracle = false

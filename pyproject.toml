@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nl2repo-factory"
+version = "0.1.0"
+description = "Repository-to-specification instance construction following nl2repo.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+nl2repo = "nl2repo_factory.cli:main"
+deepswe = "deepswe_factory.cli:main"
+programbench = "programbench_factory.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["nl2repo_factory*", "deepswe_factory*", "programbench_factory*", "swe_factory*"]
+
+[tool.setuptools.package-data]
+nl2repo_factory = ["prompts/*.md", "fixtures/tagkit/*.md", "fixtures/tagkit/*.json", "fixtures/tagkit/repo/*.toml", "fixtures/tagkit/repo/*.md", "fixtures/tagkit/repo/tagkit/*.py", "fixtures/tagkit/repo/tests/*.py"]
+deepswe_factory = ["prompts/*.md"]
+programbench_factory = ["prompts/*.md"]

@@ -1,0 +1,9 @@
+{
+  "schema_version": "teamfactory.api_manifest.v1",
+  "covered_symbols": ["tagkit.normalize_tags", "tagkit.errors.InvalidTagInput"],
+  "core_apis": [
+    {"name": "normalize_tags", "qualified_name": "tagkit.normalize_tags", "kind": "function", "start_md_heading": "#### 2. normalize_tags - Normalize comma-separated tags", "covered_import_symbols": ["tagkit.normalize_tags"]},
+    {"name": "InvalidTagInput", "qualified_name": "tagkit.errors.InvalidTagInput", "kind": "class", "start_md_heading": "#### 3. InvalidTagInput - Invalid input type", "covered_import_symbols": ["tagkit.errors.InvalidTagInput"]}
+  ],
+  "notes": "Synthetic deterministic fixture from nl2repo.md section 15; not model-generated."
+}
