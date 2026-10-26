@@ -25,6 +25,13 @@
 [ProgramBench C CLI 示例](runs/programbench-demo-02/summary.json)。
 这些记录均明确标记没有真实模型调用或 Docker 执行。
 
+## 构题分析与讲义
+
+- [SWE-Atlas RF Instance 构造讲义](RF-instance-guide/RF-instance-guide.md)：重构题的素材发现、任务扩展、验证设计与案例；附两张配图。[随包内容与来源说明](RF-instance-guide/README.md)。
+- [DeepSWE 三条构题路线的素材来源与难度分析](docs/deepswe-three-routes.md)：已有能力恢复、参考题演化、需求驱动开发，以及代码范围选择、独立工作量和当前实现边界。
+
+两份文档分别讨论 RF 重构任务与本地 DeepSWE 风格构造方法；讲义引用的 Datacurve DeepSWE 原题与本仓库复现实现分别标注来源。
+
 ## NL2Repo Factory
 
 依据 [nl2repo.md](nl2repo.md) 独立实现的第一版 instance 构造流水线。
